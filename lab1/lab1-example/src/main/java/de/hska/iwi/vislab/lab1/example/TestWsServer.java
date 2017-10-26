@@ -12,7 +12,7 @@ public class TestWsServer {
 	public static void main(final String[] args) {
 		String url = (args.length > 0) ? args[0]
 				: "http://localhost:4434/buecherservice";
-		String fibonacciUrl = "http://localhost:4434/fibonnaci";
+		String fibonacciUrl = "http://localhost:4434/fibonacciservice";
 		Endpoint ep = Endpoint.publish(url, new BuecherServiceImpl());
 		Endpoint fibonacciEndPoint = Endpoint.publish(fibonacciUrl, new FibonacciServiceImpl());
 		JOptionPane.showMessageDialog(null, "TestWsServer beenden");
