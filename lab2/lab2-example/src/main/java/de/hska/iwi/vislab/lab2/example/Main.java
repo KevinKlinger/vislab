@@ -22,8 +22,9 @@ public class Main {
     public static HttpServer startServer() {
         // create a resource config that scans for JAX-RS resources and providers
         // in de.hska.iwi.vislab.lab2.example package
-        final ResourceConfig rc = new ResourceConfig().packages("de.hska.iwi.vislab.lab2.example");
-
+//        final ResourceConfig rc = new ResourceConfig().packages("de.hska.iwi.vislab.lab2.example");
+    	final ResourceConfig rc = new ResourceConfig().packages("fibonacci");
+        
         // create and start a new instance of grizzly http server
         // exposing the Jersey application at BASE_URI
         return GrizzlyHttpServerFactory.createHttpServer(URI.create(BASE_URI), rc);
